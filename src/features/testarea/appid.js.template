@@ -1,0 +1,3 @@
+
+// GCPのMAP APIキー
+export const YOUR_API_KEY = "Your API Key";
