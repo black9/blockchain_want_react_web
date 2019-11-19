@@ -9,7 +9,6 @@ import { createNewEvent } from "../../app/common/util/helpers";
 import moment from "moment";
 import firebase from "../../app/config/template_firebase";
 import compareAsc from "date-fns/compare_asc";
-import { EventEmitter } from "events";
 import { sendtobc } from './apis';
 
 export const createEvent = event => {
@@ -27,10 +26,7 @@ export const createEvent = event => {
         userUid: user.uid,
         eventDate: event.date,
         host: true
-
       });
-      
-      
 
       toastr.success("성공", "성공적으로 등록하였습니다.");
     } catch (error) {

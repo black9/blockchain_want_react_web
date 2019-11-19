@@ -70,7 +70,7 @@ class EventDashboard extends Component {
   handleContextRef = contextRef => this.setState({contextRef})
 
   render() {
-    const { loading, activities } = this.props;
+    const { loading  } = this.props;
     const { moreEvents, loadedEvents } = this.state;
     if (this.state.loadingInitial) return <LoadingComponent inverted={true} />;
 

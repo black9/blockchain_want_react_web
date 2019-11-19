@@ -28,7 +28,7 @@ const LoginForm = ({login, handleSubmit, error, socialLogin}) => {
           placeholder="비밀번호"
         />
         {error && <Label basic color='red'>{error}</Label>}
-        <Button fluid size="large" color="teal">
+        <Button fluid size="large" color="green">
           로그인
         </Button>
         <Divider horizontal>SNS 간편 로그인</Divider>

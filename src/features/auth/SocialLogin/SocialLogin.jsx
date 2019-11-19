@@ -11,12 +11,12 @@ const SocialLogin = ({socialLogin}) => {
         fluid
         color="facebook"
       >
-        <Icon name="facebook" /> Login with Facebook
+        <Icon name="facebook" /> Facebook 로그인
       </Button>
 
       <Button onClick={() => socialLogin('google')} type="button" fluid color="google plus">
         <Icon name="google plus" />
-        Login with Google
+        Google+ 로그인
       </Button>
     </div>
   );

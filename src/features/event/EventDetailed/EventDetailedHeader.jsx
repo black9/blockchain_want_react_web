@@ -73,7 +73,7 @@ const EventDetailedHeader = ({
                 <Button
                   loading={loading}
                   onClick={() => goingToEvent(event)}
-                  color="teal"
+                  color= "yellow"
                 >
                   투자하기
                 </Button>
@@ -83,7 +83,7 @@ const EventDetailedHeader = ({
               <Button
                 loading={loading}
                 onClick={() => openModal("UnauthModal")}
-                color="teal"
+                color="yellow"
               >
                 투자하기
               </Button>

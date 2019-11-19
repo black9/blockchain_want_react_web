@@ -42,6 +42,63 @@ const category = [
   { key: "empty", text: "Empty", value: "Empty" },
 ];
 
+
+// "$class": "com.betweak.carauction.Board",
+//     "created": "string",
+//     "hostUid": "string",
+//     "date": "string",
+//     "userUid": []
+
+// [
+//   {
+//     "$class": "com.betweak.carauction.SampleTransaction",
+//     "board": {},
+//     "newuserUid": "string",
+//     "transactionId": "string",
+//     "timestamp": "2019-11-06T02:33:19.229Z"
+//   }
+// ]
+// http://localhost:3000/api/Board
+
+
+
+
+// export async function sendtobc (event){
+//   let url ="http://localhost:3000/api/Board";
+//   let today = new Date();
+//   const body={
+//     $class: "com.betweak.carauction.Board",
+//     created: today,
+//     hostUid: `com.betweak.carauction.Board#${today}`,
+//     date:today
+    
+//   };
+//   console.log(JSON.stringify(body));
+
+//   const response = await fetch(url,{
+//     method:"POST",
+//     headers:{
+//       Accept:"application/json",
+//       "Content-Type": "application/json"
+
+//     },
+//     body:JSON.stringify(body)
+//   });
+  
+
+//   if (response.ok) {
+//     console.log(response);
+//     return response.json();
+
+//   }
+//     return false
+    
+
+
+// }
+
+
+
 const validate = combineValidators({
   title: isRequired({ message: "대출 목적을 적어주세요" }),
   category: isRequired({ message: "카테고리를 선택하여주세요" }),
@@ -123,25 +180,45 @@ class EventForm extends Component {
       event,
       cancelToggle
     } = this.props;
+
+    function lottoNum (array) {
+      if (! array) {
+      var array = [];
+      }
+      let n = Math.floor(Math.random() * 10000000000000000) + 1;
+      if (array.length < 1 && array.indexOf(n) < 0) {
+      array.push(n);
+      return lottoNum(array);
+      
+      } else {
+      return array.toString();
+      }  
+      }
+
     return (
       <Grid>
-
+      
       <Grid.Column width={10}>
         <Segment>
           <Header sub color="teal" content="대출" />
           <Form onSubmit={this.props.handleSubmit(this.onFormSubmit)}>
+          <Field
+              name="category"
+              type="text"
+              component={SelectInput}
+              options={category}
+              placeholder="주제를 고르시오  -> 대출 "
+            />
             <Field
               name="title"
               type="text"
               component={TextInput}
               placeholder="대출 목적을 적어주세요 ex)롤 스킨 RP 충전 5만원 부족"
             />
-            <Field
-              name="category"
+             <Field
+              name="lottoNum"
               type="text"
-              component={SelectInput}
-              options={category}
-              placeholder="주제를 고르시오  -> 대출 "
+              component={Text}
             />
             <Field
               name="description"
@@ -171,6 +248,7 @@ class EventForm extends Component {
             />
 
             <Button
+              
               loading={loading}
               disabled={invalid || submitting || pristine}
               positive

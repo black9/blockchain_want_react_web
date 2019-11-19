@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Segment, Grid, Icon, Button } from 'semantic-ui-react';
+import { Segment, Grid, Icon } from 'semantic-ui-react';
 import format from 'date-fns/format'
 
 class EventDetailedInfo extends Component {
@@ -16,16 +16,19 @@ class EventDetailedInfo extends Component {
 
   render() {
     const { event } = this.props;
+    
     let eventDate;
     if (event.date) {
       eventDate = event.date.toDate()
     }
+
+
     return (
       <Segment.Group>
         <Segment attached="top">
           <Grid>
             <Grid.Column width={1}>
-              <Icon size="large" color="teal" name="info" />
+              <Icon size="large" color="green" name="info" />
             </Grid.Column>
             <Grid.Column width={15}>
               <p>{event.description}</p>
@@ -35,10 +38,10 @@ class EventDetailedInfo extends Component {
         <Segment attached="middle">
           <Grid>
             <Grid.Column width={1}>
-              <Icon size="large" color="teal" name="money" />
+              <Icon size="large" color="green" name="money" />
             </Grid.Column>
             <Grid.Column width={15}>
-            <span>
+            <span  className="wow flipInY" data-wow-iteration="1">
             원하는 대출 금액 :
           {event.money} 원
            </span>
@@ -48,7 +51,7 @@ class EventDetailedInfo extends Component {
         <Segment attached>
           <Grid verticalAlign="bottom">
             <Grid.Column width={1}>
-              <Icon name="calendar" size="large" color="teal" />
+              <Icon name="calendar" size="large" color="green" />
             </Grid.Column>
             <Grid.Column width={15}>
               <span>{format(eventDate, 'dddd Do MMM')} at {format(eventDate, 'h:mm A')}</span>

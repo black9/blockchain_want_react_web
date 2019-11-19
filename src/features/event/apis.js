@@ -9,10 +9,10 @@ export async function sendtobc (userUid,eventDate){
        const body={
     
       $class: "com.betweak.carauction.Board",
-    
+
       created: today,
-    
-     hostUid: `com.betweak.carauction.Board#${userUid}`,
+
+     hostUid: `${userUid}`,
     
        date: `${eventDate}`
     

@@ -39,3 +39,4 @@ const UserDeteiledEvents = ({ events, eventsLoading, changeTab }) => {
 };
 
 export default UserDeteiledEvents;
+  

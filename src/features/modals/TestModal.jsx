@@ -10,10 +10,10 @@ const actions = {
 const TestModal = ({closeModal}) => {
   return (
     <Modal closeIcon="close" open={true} onClose={closeModal}>
-      <Modal.Header>Test Modal</Modal.Header>
+      <Modal.Header>테스트중</Modal.Header>
       <Modal.Content>
         <Modal.Description>
-          <p>Test Modal... nothing to see here</p>
+          <p>테스트 모델</p>
         </Modal.Description>
       </Modal.Content>
     </Modal>

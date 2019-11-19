@@ -1,10 +1,7 @@
 import React from 'react';
 import { Button, Divider, Form, Header, Segment } from 'semantic-ui-react';
 import { Field, reduxForm } from 'redux-form';
-import RadioInput from '../../../app/common/form/RadioInput';
-import TextInput from '../../../app/common/form/TextInput';
 import TextArea from '../../../app/common/form/TextArea';
-import SelectInput from '../../../app/common/form/SelectInput';
 
 const AboutPage = ({ pristine, submitting, handleSubmit, updateProfile }) => {
   return (

@@ -14,16 +14,13 @@ const UserDetailedDescription = ({ profile }) => {
           <Grid.Column width={10}>
             <Header icon="smile" content="내 프로필" />
             <p>
-              이름 : <strong>{profile.occupation || 'empty'}</strong>
-            </p>
-            <p>
-              사는곳 : <strong>{profile.origin || 'empty'}</strong>
+              이름 : <strong>{profile.displayName}</strong>
             </p>
             <p>
               가입일 : <strong>{createdAt}</strong>
             </p>
             <p>
-              신용등급 : <strong>{profile.creditrating}</strong>
+              신용등급 : <strong>{profile.creditrating} 등급 </strong>
             </p>
             <p>{profile.description}</p>
           </Grid.Column>

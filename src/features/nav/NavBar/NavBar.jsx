@@ -41,6 +41,7 @@ class NavBar extends Component {
             <img src="/assets/logo.png" alt="logo" />
             WANT
           </Menu.Item>
+
           <Menu.Item as={NavLink} to="/events" name="펀딩 투자 하기" />
 
           {authenticated &&

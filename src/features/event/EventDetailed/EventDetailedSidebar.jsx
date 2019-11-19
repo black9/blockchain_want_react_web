@@ -11,9 +11,9 @@ const EventDetailedSidebar = ({ attendees }) => {
         attached="top"
         secondary
         inverted
-        color="teal"
+        color="green"
       >
-        {attendees && attendees.length} {attendees && attendees.length === 1 ? 'Person' : 'People'}  목록
+        {attendees && attendees.length} {attendees && attendees.length === 1 ? 'Person' : 'People'}   목록
       </Segment>
       <Segment attached>
         <List relaxed divided>  
@@ -32,6 +32,7 @@ const EventDetailedSidebar = ({ attendees }) => {
                 <Item.Content verticalAlign="middle">
                   <Item.Header as="h3">
                     <Link to={`/profile/${attendee.id}`}>{attendee.displayName}</Link>
+                    
                   </Item.Header>
                 </Item.Content>
               </Item>

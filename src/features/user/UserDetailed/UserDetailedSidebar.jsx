@@ -6,11 +6,11 @@ const UserDetailedSidebar = ({ isCurrentUser, followUser, profile, isFollowing, 
   return (
     <Grid.Column width={4}>
       <Segment>
-        {isCurrentUser && <Button as={Link} to="/settings" color="teal" fluid basic content="내 정보 수정" />}
+        {isCurrentUser && <Button as={Link} to="/settings" color="green" fluid basic content="내 정보 수정" />}
         {!isCurrentUser &&
-          !isFollowing && <Button onClick={() => followUser(profile)} color="teal" fluid basic content="Follow user" />}
+          !isFollowing && <Button onClick={() => followUser(profile)} color="green" fluid basic content="Follow user" />}
 
-        {!isCurrentUser && isFollowing && <Button onClick={() => unfollowUser(profile)} color="teal" fluid basic content="Unfollow" />}
+        {!isCurrentUser && isFollowing && <Button onClick={() => unfollowUser(profile)} color="green" fluid basic content="Unfollow" />}
       </Segment>
     </Grid.Column>
   );

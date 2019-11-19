@@ -22,7 +22,7 @@ export const updateProfile = user => async (
 
   try {
     await firebase.updateProfile(updatedUser);
-    toastr.success("Success", "Profile updated");
+    toastr.success("프로필 변경 완료", "성공적으로 저장되었습니다.");
   } catch (error) {
     console.log(error);
   }
@@ -74,7 +74,7 @@ export const uploadProfileImage = (file, fileName) => async (
   } catch (error) {
     console.log(error);
     dispatch(asyncActionError());
-    throw new Error("Problem uploading photo");
+    throw new Error("사진을 업로드하던 도중 오류가 발생하였습니다.");
   }
 };
 
@@ -95,7 +95,7 @@ export const deletePhoto = photo => async (
     });
   } catch (error) {
     console.log(error);
-    throw new Error("Problem deleting the photo");
+    throw new Error("사진을 삭제하던 도중 오류가 발생하였습니다.");
   }
 };
 
@@ -170,11 +170,11 @@ export const goingToEvent = event => async (dispatch, getState) => {
       })
     })
     dispatch(asyncActionFinish())
-    toastr.success('Success', 'You have signed up to the event');
+    toastr.success('투자 성공', '투자자가 되셨습니다.');
   } catch (error) {
     console.log(error);
     dispatch(asyncActionError())
-    toastr.error('Oops', 'Problem signing up to event');
+    toastr.error('오류', '로그인을 해주세요');
   }
 };
 
@@ -190,10 +190,10 @@ export const cancelGoingToEvent = event => async (
       [`attendees.${user.uid}`]: firestore.FieldValue.delete()
     });
     await firestore.delete(`event_attendee/${event.id}_${user.uid}`);
-    toastr.success("Success", "You have removed yourself from the event");
+    toastr.success("투자 취소", "투자를 포기하셨습니다.");
   } catch (error) {
     console.log(error);
-    toastr.error("Oops", "something went wrong");
+    toastr.error("실패", "어떠한 문제가 발생하였습니다. 관리자에게 문의해주세요");
   }
 };
 
@@ -260,7 +260,6 @@ export const followUser = userToFollow => async (
   const user = firestore.auth().currentUser;
   const following = {
     photoURL: userToFollow.photoURL || "/assets/user.png",
-    city: userToFollow.city || "unknown city",
     displayName: userToFollow.displayName
   };
   try {

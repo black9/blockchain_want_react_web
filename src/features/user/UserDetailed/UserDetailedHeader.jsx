@@ -24,7 +24,8 @@ const UserDetailedHeader = ({profile}) => {
               <br />
               <Header as="h3">{profile.occupation}</Header>
               <br />
-              <Header as="h3">{age}, Lives in {profile.city || 'unknown city'}</Header>
+              <Header as="h3">{age} 세 </Header>
+              <br />
             </Item.Content>
           </Item>
         </Item.Group>

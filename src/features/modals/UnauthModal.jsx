@@ -21,27 +21,27 @@ class UnauthModal extends Component {
     const { openModal } = this.props;
     return (
       <Modal size="mini" open={true} onClose={this.handleCloseModal}>
-        <Modal.Header>You need to be signed in to do that!</Modal.Header>
+        <Modal.Header>현재 비로그인 상태입니다.</Modal.Header>
         <Modal.Content>
           <Modal.Description>
-            <p>Please either login or register to see this page</p>
+            <p>이 페이지를 보려면 로그인 또는 회원가입을 하십시오.</p>
             <Button.Group widths={4}>
               <Button
                 fluid
-                color="teal"
+                color="green"
                 onClick={() => openModal("LoginModal")}
               >
-                Login
+                로그인
               </Button>
               <Button.Or />
               <Button fluid positive onClick={() => openModal("RegisterModal")}>
-                Register
+                회원가입
               </Button>
             </Button.Group>
             <Divider />
             <div style={{ textAlign: "center" }}>
-              <p>Or click cancel to continue as a guest</p>
-              <Button onClick={this.handleCloseModal}>Cancel</Button>
+              <p>손님으로 계속하려면 취소를 클릭하십시오.</p>
+              <Button onClick={this.handleCloseModal}>취소</Button>
             </div>
           </Modal.Description>
         </Modal.Content>
