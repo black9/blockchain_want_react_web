@@ -1,12 +1,12 @@
-export async function attendUser(userUid, eventId) {
-  let today = new Date();
+import { createEvent } from "./eventActions";
+export async function attendUser(userUid, event) {
   let url = "http://34.84.235.122:3000/api/SampleTransaction";
 
+  const eventId = event.id;
 
   const body = {
     $class: "com.betweak.carauction.SampleTransaction",
-
-    board: { boardId: eventId },
+    board: `resource:com.betweak.carauction.Board#${eventId}`,
     newuserUid: `${userUid}`
   };
 
@@ -28,6 +28,9 @@ export async function attendUser(userUid, eventId) {
     console.log(response);
 
     return response.json();
+  } else {
+    createEvent(event);
+    attendUser(userUid, event);
   }
 
   return false;

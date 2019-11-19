@@ -163,7 +163,7 @@ export const goingToEvent = event => async (dispatch, getState) => {
       await transaction.update(eventDocRef, {
         [`attendees.${user.uid}`]: attendee
       })
-      attendUser(user.uid, event.id);
+      attendUser(user.uid,event);
       await transaction.set(eventAttendeeDocRef, {
         eventId: event.id,
         userUid: user.uid,
