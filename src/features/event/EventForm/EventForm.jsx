@@ -180,45 +180,25 @@ class EventForm extends Component {
       event,
       cancelToggle
     } = this.props;
-
-    function lottoNum (array) {
-      if (! array) {
-      var array = [];
-      }
-      let n = Math.floor(Math.random() * 10000000000000000) + 1;
-      if (array.length < 1 && array.indexOf(n) < 0) {
-      array.push(n);
-      return lottoNum(array);
-      
-      } else {
-      return array.toString();
-      }  
-      }
-
     return (
       <Grid>
-      
+
       <Grid.Column width={10}>
         <Segment>
           <Header sub color="teal" content="대출" />
           <Form onSubmit={this.props.handleSubmit(this.onFormSubmit)}>
-          <Field
-              name="category"
-              type="text"
-              component={SelectInput}
-              options={category}
-              placeholder="주제를 고르시오  -> 대출 "
-            />
             <Field
               name="title"
               type="text"
               component={TextInput}
               placeholder="대출 목적을 적어주세요 ex)롤 스킨 RP 충전 5만원 부족"
             />
-             <Field
-              name="lottoNum"
+            <Field
+              name="category"
               type="text"
-              component={Text}
+              component={SelectInput}
+              options={category}
+              placeholder="주제를 고르시오  -> 대출 "
             />
             <Field
               name="description"
@@ -250,6 +230,7 @@ class EventForm extends Component {
             <Button
               
               loading={loading}
+             // onClick={() =>sendtobc ()}
               disabled={invalid || submitting || pristine}
               positive
               type="submit"

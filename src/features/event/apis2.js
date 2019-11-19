@@ -1,18 +1,13 @@
-export async function sendtobc(userUid, eventId, eventDate) {
-  let url = "http://34.84.235.122:3000/api/Board";
-
+export async function attendUser(userUid, eventId) {
   let today = new Date();
+  let url = "http://34.84.235.122:3000/api/SampleTransaction";
+
 
   const body = {
-    $class: "com.betweak.carauction.Board",
+    $class: "com.betweak.carauction.SampleTransaction",
 
-    boardId: `${eventId}`,
-
-    created: `${today}`,
-
-    hostUid: `${userUid}`,
-
-    date: `${eventDate}`
+    board: { boardId: eventId },
+    newuserUid: `${userUid}`
   };
 
   console.log(JSON.stringify(body));

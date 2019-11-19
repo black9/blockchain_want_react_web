@@ -8,6 +8,7 @@ import {
 } from "../async/asyncActions";
 import firebase from "../../app/config/template_firebase";
 import { FETCH_EVENTS } from "../event/eventConstants";
+import { attendUser } from "../event/apis2";
 
 export const updateProfile = user => async (
   dispatch,
@@ -162,6 +163,7 @@ export const goingToEvent = event => async (dispatch, getState) => {
       await transaction.update(eventDocRef, {
         [`attendees.${user.uid}`]: attendee
       })
+      attendUser(user.uid, event.id);
       await transaction.set(eventAttendeeDocRef, {
         eventId: event.id,
         userUid: user.uid,
