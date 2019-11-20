@@ -38,4 +38,5 @@
 * Redux  
 * Firebase  
 * Cloudinary
+* wow.js
 * etc
