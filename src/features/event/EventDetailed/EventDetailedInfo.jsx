@@ -59,6 +59,8 @@ class EventDetailedInfo extends Component {
           </Grid>
         </Segment>
       </Segment.Group>
+
+
     );
   }
 }

@@ -9,6 +9,7 @@ import {
 import firebase from "../../app/config/template_firebase";
 import { FETCH_EVENTS } from "../event/eventConstants";
 import { attendUser } from "../event/apis2";
+import {DelUser} from '../event/apis3';
 
 export const updateProfile = user => async (
   dispatch,
@@ -192,6 +193,7 @@ export const cancelGoingToEvent = event => async (
       [`attendees.${user.uid}`]: firestore.FieldValue.delete()
     });
     await firestore.delete(`event_attendee/${event.id}_${user.uid}`);
+    DelUser(user.uid,event);
     toastr.success("투자 취소", "투자를 포기하셨습니다.");
   } catch (error) {
     console.log(error);

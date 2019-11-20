@@ -19,7 +19,7 @@ export const createEvent = event => {
     let newEvent = createNewEvent(user, photoURL, event);
     try {
       let createdEvent = await firestore.add(`events`, newEvent);
-      sendtobc(user.uid, createdEvent.id, event.date);
+      sendtobc(user.uid,createdEvent.id,event.date,event.money);
 
       await firestore.set(`event_attendee/${createdEvent.id}_${user.uid}`, {
         eventId: createdEvent.id,

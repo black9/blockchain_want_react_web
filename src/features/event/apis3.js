@@ -1,21 +1,12 @@
-export async function sendtobc (userUid,eventId,eventDate,money) {
-  let url = "http://34.84.235.122:3000/api/Board";
+export async function DelUser(userUid, event) {
+  let url = "http://34.84.235.122:3000/api/RemoveTransaction";
 
-  let today = new Date();
+  const eventId = event.id;
 
   const body = {
-    $class: "com.betweak.carauction.Board",
-
-    boardId: `${eventId}`,
-
-    created: `${today}`,
-
-    hostUid: `${userUid}`,
-
-    date: `${eventDate}`,
-
-    money:`${money}`
-
+    $class: "com.betweak.carauction.RemoveTransaction",
+    board: `resource:com.betweak.carauction.Board#${eventId}`,
+    newuserUid: `${userUid}`
   };
 
   console.log(JSON.stringify(body));
@@ -36,7 +27,7 @@ export async function sendtobc (userUid,eventId,eventDate,money) {
     console.log(response);
 
     return response.json();
+  } else {
+    return false;
   }
-
-  return false;
 }

@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(234, 234, 234) !important;
+  background-color: rgb(255, 255, 255) !important;
 }
 
 /*timepicker style*/
@@ -29,7 +29,7 @@ body {
 }
 
 .masthead.segment {
-  min-height: 700px;
+  min-height: 550px;
   padding: 1em 0 !important;
 }
 
@@ -59,7 +59,6 @@ body {
 }
 
 
-
 /*end home page styles*/
 
 /* navbar styles */
@@ -67,6 +66,11 @@ body {
 .ui.menu .item img.logo {
   margin-right: 1.5em;
 }
+
+.mainchart {
+  margin-right: 20.5em;
+}
+
 
 .ui.fixed.menu {
   background-image: linear-gradient(
@@ -109,12 +113,73 @@ body {
 /*Video*/
 
 .player-wrapper {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+  padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
 }
 
 .react-player {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: absolute;
+
   top: 0;
   left: 0;
+}
+
+
+.blank{
+  height: 10vh;
+  width:100%;
+}
+
+.center2{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  width:100%;
+  font-size: 40px;
+  line-height: 62px;
+}
+
+
+
+.fonthi{
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.fonthi2{
+  font-family: 'Noto Sans KR', sans-serif;
+  color : grey
+}
+
+.fonthi12{
+  font-family: 'Noto Sans KR', sans-serif;
+  color : grey;
+  margin-left: 1.5em;
+}
+
+
+.fonthi3{
+  color : Purple
+}
+
+.fontbye{
+  color : green;
+}
+
+
+.testhi {
+  background-image: linear-gradient(
+          135deg,
+          rgb(239, 247, 215) 0%,
+          rgb(239, 247, 215)  100%
+  ) !important;
 }
