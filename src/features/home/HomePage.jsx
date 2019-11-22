@@ -36,7 +36,7 @@ class HomePage extends React.Component {
         <div className="center2 ">
           <h1 className="fonthi"> 100만원의 1년 투자수익은? </h1>
           <h3 className="fonthi2"> 은행 17,133원 </h3>
-          <h1 className="wow bounceIn fonthi3" data-wow-delay="0.5s ">
+          <h1 className="wow bounceInDown fonthi3" data-wow-delay="0.5s">
             WANT 93,200 원
           </h1>
         </div>
@@ -44,7 +44,7 @@ class HomePage extends React.Component {
         <div className="blank"></div>
 
         <div className="center2 testhi">
-          <h1 className="wow bounceInDown fontbye" data-wow-delay="0.5s">
+          <h1 className="wow bounceIn fontbye" data-wow-delay="1.3s">
             평균 수익률 10.1%
           </h1>
 
@@ -55,18 +55,20 @@ class HomePage extends React.Component {
 
         <div className="blank"></div>
 
+
         <div>
+        {/* <h1 className="wow bounceOut" data-wow-delay="0.5s" color>
+          애니메이션 적용 확인 완료
+        </h1> */}
+
+
       </div>
-
-
-
-        <h1 className="wow bounceOut" data-wow-delay="0.5s" color>
-          애니메이션 적용 확인 완료
+      <div className="center1 fonthi4">
+      <h1 className="wow fadeIn" data-wow-delay="3.5s">
+         WANT
         </h1>
+        </div>
 
-        <h1 className="wow fadeIn" data-wow-delay="0.5s">
-          애니메이션 적용 확인 완료
-        </h1>
       </div>
     );
   }

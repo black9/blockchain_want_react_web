@@ -138,6 +138,16 @@ body {
   width:100%;
 }
 
+.center1{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  width:100%;
+  line-height: 62px;
+}
+
 .center2{
   display:flex;
   flex-direction: column;
@@ -166,9 +176,12 @@ body {
   margin-left: 1.5em;
 }
 
-
 .fonthi3{
   color : Purple
+}
+
+.fonthi4{
+  font-size: 500px;
 }
 
 .fontbye{

@@ -104,6 +104,9 @@ const EventDetailedHeader = ({
            수정
           </Button>
         )}
+
+
+        
       </Segment>
     </Segment.Group>
   );

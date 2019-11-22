@@ -41,7 +41,7 @@ class EventDetailedInfo extends Component {
               <Icon size="large" color="green" name="money" />
             </Grid.Column>
             <Grid.Column width={15}>
-            <span  className="wow flipInY" data-wow-iteration="1">
+            <span>
             원하는 대출 금액 :
           {event.money} 원
            </span>

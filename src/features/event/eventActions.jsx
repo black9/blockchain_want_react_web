@@ -82,6 +82,28 @@ export const updateEvent = event => {
   };
 };
 
+export const succeedToggle = (succeed, eventId) => async (
+  dispatch,
+  getState,
+  { getFirestore }
+) => {
+  const firestore = getFirestore();
+  const message = succeed
+    ? "대출 신청을 취소하시겠습니까? [취소시 불이익이 발생합니다]"
+    : "대출 신청을 다시 활성화 하시겠습니까?";
+  try {
+    toastr.confirm(message, {
+      onOk: () =>
+        firestore.update(`events/${eventId}`, {
+          succeed: succeed
+        })
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+
 export const cancelToggle = (cancelled, eventId) => async (
   dispatch,
   getState,

@@ -26,6 +26,9 @@ class EventListItem extends Component {
 
                 {event.cancelled &&
                 <Label style={{top: '-40px'}} ribbon='right' color='red' content='[관리자 검토 부적합, 개인적인 사정] 투자가 불가능한 게시글'/>}
+
+                {event.succeed &&
+                <Label style={{top: '-40px'}} ribbon='right' color='blue' content='[대출, 투자 분배성공] 대출이 완료되어 대출자가 상환된 게시글'/>}
               </Item.Content>
             </Item>
           </Item.Group>

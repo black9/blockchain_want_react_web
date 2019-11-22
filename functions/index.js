@@ -45,9 +45,15 @@ exports.cancelActivity = functions.firestore.document('events/{eventId}').onUpda
   console.log({ updatedEvent });
   console.log({ previousEventData });
 
+  if (!updatedEvent.succeed || updatedEvent.succeed === previousEventData.succeed) {
+    return false;
+  }
+
   if (!updatedEvent.cancelled || updatedEvent.cancelled === previousEventData.cancelled) {
     return false;
   }
+
+  const activity = newActivity('succeedEvent', updatedEvent, context.params.eventId);
 
   const activity = newActivity('cancelledEvent', updatedEvent, context.params.eventId);
 
