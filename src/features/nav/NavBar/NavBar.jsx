@@ -42,7 +42,8 @@ class NavBar extends Component {
             WANT
           </Menu.Item>
 
-          <Menu.Item as={NavLink} to="/events" name="펀딩 투자 하기" />
+          <Menu.Item as={NavLink} to="/events" name="펀딩 투자 목록" />
+          <Menu.Item as={NavLink} to="/events2" name="지난 펀딩 투자 목록" />
 
           {authenticated &&
           <Menu.Item>
