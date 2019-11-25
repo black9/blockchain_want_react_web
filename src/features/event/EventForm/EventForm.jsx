@@ -39,8 +39,12 @@ const actions = {
 };
 
 const category = [
-  { key: "Loan", text: "대출", value: "Loan" },
-  { key: "empty", text: "Empty", value: "Empty" }
+  { key: "Loan1", text: "대출", value: "Loan1" },
+  { key: "Loan2", text: "대출", value: "Loan2" },
+  { key: "Loan3", text: "대출", value: "Loan3" },
+  { key: "Loan4", text: "대출", value: "Loan4" },
+  { key: "Loan5", text: "대출", value: "Loan5" },
+  { key: "Loan6", text: "대출", value: "Loan6" },
 ];
 
 const money = [

@@ -33,7 +33,7 @@ const RegisterForm = ({
       <Form size="large" onSubmit={handleSubmit(registerUser)}>
       <RadioGroup onChange={this.onChange} horizontal>
           <RadioButton value="investor">투자자</RadioButton>
-          <RadioButton value="loaner">대출자</RadioButton>
+          <RadioButton value="lo aner">대출자</RadioButton>
         </RadioGroup>
         <Segment>
           <Field

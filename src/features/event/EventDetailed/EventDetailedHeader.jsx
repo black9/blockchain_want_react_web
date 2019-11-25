@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import format from "date-fns/format";
 
 const eventImageStyle = {
-  filter: "brightness(30%)"
+  filter: "brightness(70%)"
 };
 
 const eventImageTextStyle = {
