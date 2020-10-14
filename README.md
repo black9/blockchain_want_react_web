@@ -6,11 +6,10 @@
         https://chocolatey.org/install
 
     Mac OS
-    Sorry I don't Know
+    curl https://install.meteor.com/ | sh
 
     Linux
     * curl https://install.meteor.com/ | sh
-
 
     Terminal
     1. meteor npm install --save @babel/runtime
