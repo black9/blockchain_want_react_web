@@ -1,9 +1,9 @@
-# Want_React_App_Web
+# blockchain_want_react_web
 
 ## Demo
 https://dreamy-wilson-64bdc9.netlify.app/
 
-
+---
 * How to start
     Windows 
     * MeteorJS, Chocolatey install
