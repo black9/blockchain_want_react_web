@@ -3,6 +3,8 @@
 ## Demo
 https://dreamy-wilson-64bdc9.netlify.app/
 
+But Blockchain Server Died
+
 ---
 * How to start
     Windows 
