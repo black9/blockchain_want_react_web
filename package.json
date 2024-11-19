@@ -8,7 +8,7 @@
     "cuid": "^2.1.1",
     "date-fns": "^1.29.0",
     "divider": "^0.1.1",
-    "firebase": "^4.12.1",
+    "firebase": "^10.9.0",
     "google-map-react": "^0.34.0",
     "history": "^4.7.2",
     "moment": "^2.22.0",
